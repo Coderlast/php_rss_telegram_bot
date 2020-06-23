@@ -15,7 +15,10 @@ $chat_id = $message->chat->id;
 
 if($message->text == "/start"){
     $url = file_get_contents("https://pixabay.com/api/?key=".$api."&q=".$photo."&lang=ko&safesearch=true");
-
+    bot("sendmessage",[
+        'chat_id'=>$chat_id,
+        'text'=>print_r($url,true)
+    ]);
 }
 
 if($_GET){
