@@ -22,4 +22,6 @@ if($_GET){
     $url = "https://pixabay.com/api/?key=".$api."&q=".encodeURIComponent($photo)."&lang=ko&safesearch=true";
     echo "</pre>";
     print_r($url);
+}else{
+    echo "bot yoq";
 }
