@@ -1,7 +1,7 @@
 <?php
 
 $api = (string) "17169214-1237dd691a71f28369529dabd";
-$token = (string) "";
+$token = (string) "601089650:AAHTNKp2gbbZWDeDsd5lRMEwWeHYJ5mIIqk";
 
 function bot($method, $data=[]){
     global $token;
@@ -14,7 +14,8 @@ $message = $update->message;
 $chat_id = $message->chat->id;
 
 if($message->text == "/start"){
-    $url = "https://pixabay.com/api/?key=".$api."&q=".encodeURIComponent($message->text)."&lang=ko&safesearch=true";
+    $url = file_get_contents("https://pixabay.com/api/?key=".$api."&q=".$photo."&lang=ko&safesearch=true");
+
 }
 
 if($_GET){
