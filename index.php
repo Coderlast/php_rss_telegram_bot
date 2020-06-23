@@ -19,7 +19,7 @@ if($message->text == "/start"){
 
 if($_GET){
     $photo = $_GET['photo'];
-    $url = "https://pixabay.com/api/?key=".$api."&q=".encodeURIComponent($photo)."&lang=ko&safesearch=true";
+    $url = file_get_contents("https://pixabay.com/api/?key=".$api."&q=".$photo."&lang=ko&safesearch=true");
     echo "</pre>";
     print_r($url);
 }else{
