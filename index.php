@@ -20,7 +20,7 @@ if($message->text == "/start"){
 if($_GET){
     $photo = $_GET['photo'];
     $url = file_get_contents("https://pixabay.com/api/?key=".$api."&q=".$photo."&lang=ko&safesearch=true");
-    echo "</pre>";
+    echo "<pre>";
     print_r($url);
 }else{
     echo "bot yoq";
