@@ -1,6 +1,6 @@
 <?php
 
-$api = (string) "";
+$api = (string) "17169214-1237dd691a71f28369529dabd";
 $token = (string) "";
 
 function bot($method, $data=[]){
